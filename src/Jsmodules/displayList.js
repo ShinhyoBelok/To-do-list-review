@@ -1,4 +1,4 @@
-import updateEvent from './updateEvent';/* eslint-disable-line */
+import updateEvent from './updateEvent.js';/* eslint-disable-line */
 
 const toDoListContainer = document.querySelector('.toDoListContainer');
 const displayList = (array) => {
@@ -18,13 +18,13 @@ const displayList = (array) => {
         completedStyle = { line: '', box: '' };
       }
       const listTemplate = `
-        <article class="list lineStyle" id="${counter}">
-          <div class="elementList">
+        <article class="list lineStyle dflexRow" id="${counter}">
+          <div class="elementList dflexRow">
             <input type="checkbox" class="checkbox" ${completedStyle.box}>
             <p class="description ${completedStyle.line}" contenteditable="true">${array[i].description}</p>
           </div>
           <img class="trashCan">
-          <div class="verticalDots">
+          <div class="verticalDots dflexColumn">
             <span class="dot"></span>
             <span class="dot"></span>
             <span class="dot"></span>

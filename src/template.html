@@ -7,20 +7,20 @@
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300&display=swap" rel="stylesheet">
   <title>To do list</title>
 </head>
-<body>
-  <div class="listContainer">
-    <section class="headerList lineStyle">
+<body class="dflexColumn">
+  <main class="listContainer dflexColumn">
+    <section class="headerList lineStyle dflexRow">
       <h2 class="listTitle" contenteditable="true">Today's To Do</h2>
       <span class="arrow-ccw reload"></span>
     </section>
-    <form class="input lineStyle">
+    <form class="input lineStyle dflexRow">
       <input type="text" placeholder="+ Add to your list...">
       <button type="submit" class="enter"></button>
     </form>
     <section class="toDoListContainer"></section>
-    <div class="clear lineStyle">
+    <section class="clear lineStyle dflexRow">
       <button class="clearBtn" type="button">Clear all completed</button>
-    </div>
-  </div>
+    </section>
+  </main>
 </body>
 </html>

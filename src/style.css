@@ -7,8 +7,17 @@
   outline: none;
 }
 
-body {
+.dflexColumn {
   display: flex;
+  flex-direction: column;
+}
+
+.dflexRow {
+  display: flex;
+  align-items: center;
+}
+
+body {
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -16,8 +25,6 @@ body {
 }
 
 .listContainer {
-  display: flex;
-  flex-direction: column;
   list-style: none;
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3);
   width: 75vw;
@@ -31,7 +38,6 @@ body {
 
 .clear {
   border-bottom: unset !important;
-  display: flex;
   background-color: #f6f6f6;
 }
 
@@ -45,8 +51,6 @@ body {
 }
 
 .input {
-  display: flex;
-  align-items: center;
   justify-content: space-between;
 }
 
@@ -55,8 +59,6 @@ input {
 }
 
 .list {
-  display: flex;
-  align-items: center;
   gap: 20px;
   width: 100%;
   justify-content: space-between;
@@ -96,8 +98,6 @@ input:checked[type="checkbox"]::before {
 }
 
 .verticalDots {
-  display: flex;
-  flex-direction: column;
   gap: 2px;
   align-self: center;
   justify-self: end;
@@ -111,9 +111,7 @@ input:checked[type="checkbox"]::before {
 }
 
 .elementList {
-  display: flex;
   gap: 15px;
-  align-items: center;
 }
 
 .lineThrough {
@@ -131,8 +129,6 @@ input:checked[type="checkbox"]::before {
 }
 
 .headerList {
-  display: flex;
-  align-items: center;
   justify-content: space-between;
 }
 
