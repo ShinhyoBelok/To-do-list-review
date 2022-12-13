@@ -1,0 +1,42 @@
+import updateEvent from './updateEvent.js';/* eslint-disable-line */
+
+const toDoListContainer = document.querySelector('.toDoListContainer');
+const displayList = (array) => {
+  localStorage.setItem('listOfTasks', JSON.stringify(array));
+  toDoListContainer.innerHTML = '';
+  let completedStyle = { line: '', box: '' };
+  let counter = 0;
+  let i = 0;
+  while (counter < array.length) {
+    if (i === array.length) {
+      i = 0;
+    }
+    if (counter === array[i].index) {
+      if (array[i].completed === true) {
+        completedStyle = { line: 'lineThrough', box: 'checked' };
+      } else {
+        completedStyle = { line: '', box: '' };
+      }
+      const listTemplate = `
+        <article class="list lineStyle dflexRow" id="${counter}">
+          <div class="elementList dflexRow">
+            <input type="checkbox" class="checkbox" ${completedStyle.box}>
+            <p class="description ${completedStyle.line}" contenteditable="true">${array[i].description}</p>
+          </div>
+          <img class="trashCan">
+          <div class="verticalDots dflexColumn">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+        </article>
+      `;
+      toDoListContainer.innerHTML += listTemplate;
+      counter += 1;
+    }
+    i += 1;
+  }
+  updateEvent();
+};
+
+export default displayList;
